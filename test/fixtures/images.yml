@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  friend_name: MyString
+  friend_mobile: MyString
+  friend_address: MyText
+  friend_date__of_birth: 2011-08-13
+
+two:
+  friend_name: MyString
+  friend_mobile: MyString
+  friend_address: MyText
+  friend_date__of_birth: 2011-08-13

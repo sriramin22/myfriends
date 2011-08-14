@@ -1,0 +1,29 @@
+<h1>My Friends</h1>
+
+
+<% @images.each do |image| %>
+<table>
+  <tr>
+    <td>Friend name</td>
+    <td><%= link_to "#{image.friend_name}", image %>&nbsp;&nbsp;<%= link_to 'Edit', edit_image_path(image) %>|<%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %> </td>
+</tr>
+<tr>
+    <td>Friend mobile</td>
+<td><%= image.friend_mobile %></td>
+</tr>
+<tr>
+    <td>Friend address</td>
+<td><%= image.friend_address %></td>
+</tr>
+<tr>
+    <td>Friend date  of birth</td>
+<td><%= image.friend_date__of_birth %></td>
+</tr>
+</table>
+<br/>
+<% end %>
+
+<%= will_paginate @images %>
+<br />
+
+<%= link_to 'Add Friend', new_image_path %>

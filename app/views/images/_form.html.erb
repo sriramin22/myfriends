@@ -1,0 +1,63 @@
+<%= form_for(@image, :html => { :multipart => true } ) do |f| %>
+  <% if @image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
+
+      <ul>
+      <% @image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<h1 align=left><img src="friend.jpg" align=left width=200 height=200></h1><br>
+
+<center>
+<table border=1>
+<tr bgcolor=green>
+<td>
+ 
+    <%= f.label :friend_name %><br />
+</td>
+<td>
+    <%= f.text_field :friend_name %>
+ </td>
+
+ <tr bgcolor=green>
+<td>
+    <%= f.label :friend_mobile %><br />
+</td>
+<td>
+    <%= f.text_field :friend_mobile %>
+</td>
+  </tr>
+<tr bgcolor=green>
+ <td>
+    <%= f.label :friend_address %><br />
+</td>
+<td>
+    <%= f.text_area :friend_address %>
+</td>
+  </tr>
+ <tr bgcolor=green>
+<td>
+    <%= f.label :friend_date__of_birth %><br />
+</td>
+<td>
+    <%= f.date_select :friend_date__of_birth %>
+  </td>
+</tr>
+<tr bgcolor=green>
+<td>Image_upload</td>
+<td>
+<%= f.file_field :avatar %>
+</td>
+</tr>
+</table>
+</center>
+<center>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</center>
+<% end %>

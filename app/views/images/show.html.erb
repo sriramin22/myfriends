@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Friend name:</b>
+  <%= @image.friend_name %>
+</p>
+
+<p>
+  <b>Friend mobile:</b>
+  <%= @image.friend_mobile %>
+</p>
+
+<p>
+  <b>Friend address:</b>
+  <%= @image.friend_address %>
+</p>
+
+<p>
+  <b>Friend date  of birth:</b>
+  <%= @image.friend_date__of_birth %>
+</p>
+<p>
+<%= image_tag @image.avatar.url %>
+<%= image_tag @image.avatar.url(:thumb) %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>
